@@ -7,7 +7,7 @@ import cv2
 
 for k in range(10):
     
-    path = f'MICS_MNIST/{k}_final.png'
+    path = f'MICS_MNIST/pictures/{k}_final.png'
     img = np.array(cv2.imread(path,0))
     #get black components in image
     ret,thresh = cv2.threshold(img,200,255,0)
