@@ -4,6 +4,9 @@ Ressources for Deep Learning Course (VSE).
 Drive folder with datasets:
 https://drive.google.com/drive/folders/1_KqzmBVvZKwvLi0a1W3P6wPa-IgwnmLP?usp=share_link
 
+Colab notebook example that mounts your drive:
+https://colab.research.google.com/drive/1Ummw01RU9TeSnmoUIBAPR88wfTpLvZUD?usp=sharing
+
 Kaggle links:
 - Fitting function 1D-1D: https://www.kaggle.com/t/81c8fa412fb840c0b34fe86e7dab174f
 - Fitting function 5D-5D: https://www.kaggle.com/t/3eb9e2aa517a414aacd0c9468281a7c2
