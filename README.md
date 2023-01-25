@@ -1,7 +1,7 @@
 # Deep Learning Course
 Ressources for Deep Learning Course (VSE).
 
-Examination:
+## Grade breakdown:
 - Kaggle challenges: 30% of the total grade; deadline on 15th of March 2023 at 5pm
   * Fitting functions (1D-1D & 5D-5D)
   * Binary face classification (with glasses or without glasses)
@@ -16,13 +16,13 @@ Examination:
   * Example of a project: [this website](https://thispersondoesnotexist.com/) generates artificial images of people. [Scrap](https://github.com/David-Lor/ThisPersonDoesNotExistAPI) images (or find a database of images), split it in two (realistic and non-realistic images) and create a neural network that outputs "realistic" or "not realistic" when receiving images. Then create a simple code that requests the API of the website and only outputs that are realistic.
   * Example 2 of a project: detect language from an audio sample.
 
-Drive folder with datasets:
+## Drive folder with datasets:
 https://drive.google.com/drive/folders/1_KqzmBVvZKwvLi0a1W3P6wPa-IgwnmLP?usp=share_link
 
-Colab notebook example that mounts your drive:
+## Colab notebook example that mounts your drive:
 https://colab.research.google.com/drive/1Ummw01RU9TeSnmoUIBAPR88wfTpLvZUD?usp=sharing
 
-Kaggle links:
+## Kaggle links:
 - Fitting function 1D-1D: https://www.kaggle.com/t/81c8fa412fb840c0b34fe86e7dab174f
 - Fitting function 5D-5D: https://www.kaggle.com/t/3eb9e2aa517a414aacd0c9468281a7c2
 - Binary Classification (Glasses/NoGlasses): https://www.kaggle.com/t/a232e4d3385b46c68921719e547b45e1
