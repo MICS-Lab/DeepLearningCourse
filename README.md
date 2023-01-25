@@ -12,6 +12,8 @@ Examination:
   * Deadline 2nd of April 2023 at 23h59
   * Must demonstrate understanding of deep learning & ability to lead a project
   * Easiest projects that are thoroughly understood are preferred to complicated projects that are only scratched the surface
+  * Slides and written report must be in English. Presentation doesn't need to.
+  * Example of a project: this website (https://thispersondoesnotexist.com/) generates artificial images of people. Scrap images (or find a database of images), split it in two (realistic and non-realistic images) and create a neural network that outputs "realistic" or "not realistic" when receiving images. Then create a simple code that requests the API of the website and only outputs that are realistic.
 
 Drive folder with datasets:
 https://drive.google.com/drive/folders/1_KqzmBVvZKwvLi0a1W3P6wPa-IgwnmLP?usp=share_link
