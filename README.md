@@ -1,6 +1,18 @@
 # Deep Learning Course
 Ressources for Deep Learning Course (VSE).
 
+Examination:
+- Kaggle challenges: 30% of the total grade; deadline on 15th of March 2023 at 5pm
+  * Fitting functions (1D-1D & 5D-5D)
+  * Binary face classification (with glasses or without glasses)
+  * Multi (10) classes classification
+  * Transfer Learning
+- Group Project: 70% of the grade
+  * 2-3 per group
+  * Deadline 2nd of April 2023 at 23h59
+  * Must demonstrate understanding of deep learning & ability to lead a project
+  * Easiest projects that are thoroughly understood are preferred to complicated projects that are only scratched the surface
+
 Drive folder with datasets:
 https://drive.google.com/drive/folders/1_KqzmBVvZKwvLi0a1W3P6wPa-IgwnmLP?usp=share_link
 
