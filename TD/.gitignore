@@ -1,3 +1,9 @@
 data/
 *.html
 *.pdf
+
+DL_Practice_*_solutions_files/
+*.log
+*.aux
+*.out
+*.synctex.gz

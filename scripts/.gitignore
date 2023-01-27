@@ -1,3 +1,8 @@
 *.gv
 *.pdf
 *.html
+
+*.log
+*.aux
+*.out
+*.synctex.gz
