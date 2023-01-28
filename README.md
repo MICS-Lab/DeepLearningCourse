@@ -10,7 +10,7 @@ Ressources for Deep Learning Course (VSE).
   * Transfer Learning
 - Group Project: 70% of the grade
   * 2-3 per group
-  * Deadline 2nd of April 2023 at 11:59 pm
+  * Deadline on the 2nd of April 2023, 11:59 pm
   * Must demonstrate understanding of deep learning & ability to lead a project
   * Easiest projects that are thoroughly understood are preferred to complicated projects that are only scratched the surface
   * Slides and written report must be in English. Presentation doesn't need to.
