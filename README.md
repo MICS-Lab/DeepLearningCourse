@@ -3,7 +3,7 @@ Ressources for Deep Learning Course (VSE).
 
 ## Grade breakdown:
 - Kaggle challenges: 30% of the total grade
-  * Deadline on 15th of March 2023 at 5pm
+  * Deadline on the 15th of March 2023, 5pm
   * Fitting functions (1D-1D & 5D-5D)
   * Binary face classification (with glasses or without glasses)
   * Multi (10) classes classification
