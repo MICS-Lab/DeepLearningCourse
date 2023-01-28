@@ -1,4 +1,7 @@
 \documentclass[]{article}
+\usepackage{amssymb}
+\usepackage{amstext}
+
 \newtheorem{theorem}{Theorem}
 \newtheorem{proof}{Proof}
 \newtheorem{definition}{Definition}
@@ -25,6 +28,8 @@
 \end{definition}
 
 \section{Theorem}
+$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ and } p \in \mathcal{P}(N,1) \text{ s.t. } \|p-f\|_\infty < \varepsilon$$
+Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
 
 \section{Idea}
 
