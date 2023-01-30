@@ -78,13 +78,20 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 	If $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
 \end{claim}
 \begin{proof}
-	\subparagraph{Case $k=0$}
+	\textbf{Case $k=0$:}\newline
 	Let $x \in \left[ c_0, c_1 \right]$, then:
 	$$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+$$
 	since $x \leq c_1$, $(x - c_k)_+ = 0 \quad \forall k>0$, and $(x - c_k)_+ = x - c_k$: 
 	$$p(x) = f(a) + \gamma_0 (x - c_0)$$
 	as $\tilde{\gamma_0} =\gamma_0$ and $a = c_0$, we finally have $p(x) = f(a) + \tilde{\gamma_0}(x - c_0)$, as expected.
 	
+	\textbf{Recursion:}\newline
+	\begin{itemize}
+		\item Suppose that if $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
+		\item We want to show that if $x \in \left[ c_{n+1}, c_{n+2} \right]$, then $p(x) = f(c_{n+1}) + \tilde{\gamma_{n+1}}(x-c_{n+1})$.
+	\end{itemize}
+
+
 \end{proof}
 
 \end{document}
