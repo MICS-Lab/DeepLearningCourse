@@ -108,11 +108,21 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 \end{proof}
 Therefore, we have that $\forall\, 0 \leq n < N$, if $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
 
-\paragraph{Bounds for $f(x)$ and $p(x)$ on $\left[ c_n, c_{n+1} \right]$}
+\paragraph{Bounds for $f(x)$ and $p(x)$ on $\left[ c_n, c_{n+1} \right)$}
 Take $x \in \left[ c_n, c_{n+1} \right)$, then we have: $|c_n - x| < \delta$, so $|f(x) - f(c_n)| < \varepsilon$.
 
 WLOG\footnote{Without Loss Of Generalities}, take $f(c_n) \leq f(c_{n+1})$:
 - $f(c_n) \leq p(x) \leq f(c_{n+1})$ and $|f(c_{n+1}) - f(c_n)| \leq \varepsilon$ so $|p(x) - f(c_n)| \leq \varepsilon$.
+
+\paragraph{Bound for $f(x) - p(x)$ on $\left[ a,b \right)$}
+$$|f(x) - p(x)| = |f(x) - f(c_n) + f(c_n) - p(x)|$$
+$$\leq |f(x) - f(c_n)| + |p(x) - f(c_n)|$$
+$$< \varepsilon + \varepsilon = 2\varepsilon$$
+This is true $\forall\, 0 \leq n < N, \ \forall\, x \in \left[ c_n, c_{n+1} \right)$, it is true $\forall\, x \in \left[ a,b \right)$.
+
+Moreover, $p(b) = f(b)$ (from the property above), so $|f(x) - p(x)| < 2\varepsilon$ on all of $\left[ a,b \right]$.
+
+Thus, we finally have $\|f-p\|_\infty < 2\varepsilon$.
 
 
 \end{document}
