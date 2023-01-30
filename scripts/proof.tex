@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{graphicx} 
+\usepackage{hyperref}
 
 \newtheorem*{theorem}{Theorem}
 \newtheorem*{definition}{Definition}
@@ -30,7 +31,7 @@
 	$\mathcal{P}\left( n,l \right)$ is the set of rectangle 1D-1D perceptrons with $l$ hidden layers and $n$ neurons in each hidden layer.
 \end{definition}
 
-\begin{theorem}[Particular case of the universal approxi]
+\begin{theorem}[Particular case of the universal approximation theorem\footnote{See \url{https://en.wikipedia.org/wiki/Universal_approximation_theorem} for details.}]
 	$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ and } p \in \mathcal{P}(N,1) \text{ s.t. } \|p-f\|_\infty < \varepsilon$$
 	Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
 \end{theorem}
