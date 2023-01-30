@@ -39,6 +39,9 @@ Then, choose the weights of the neural network to interpolate linearly $f$ et th
 \includegraphics[width=\linewidth]{plot}
 
 \section{Proof}
+Let $\varepsilon >0$ and $f \in \mathcal{C}(\left[ a,b \right])$ with $a,b \in \mathbb{R}$, we want $N \in \mathbb{N}$ and $p \in \mathcal{P}(N,1)$ such that $\|p-f\|_\infty < \varepsilon$.
+
+
 Since $f$ is continuous on a compact set, so $f$ is uniformly continuous.
 Thus, $\forall x_1,x_2 \in \left[ a,b \right]$, $\exists \delta>0$ such that 
 $$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
