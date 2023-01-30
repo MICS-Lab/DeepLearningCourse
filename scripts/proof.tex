@@ -33,7 +33,8 @@ $$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \e
 Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
 
 \section{Idea}
-
+The idea of the proof is to split the interval $\left[ a,b \right]$ in sub intervals such that $f$ has variation less than $\varepsilon$ in the sub-intervals.
+Then, choose the weights of the neural network to interpolate linearly $f$ et the beginning and end of the sub-intervals.
 \includegraphics[width=\linewidth]{plot}
 
 \section{Proof}
