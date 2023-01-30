@@ -1,6 +1,7 @@
 \documentclass[]{article}
 \usepackage{amssymb}
 \usepackage{amstext}
+\usepackage{amsmath}
 \usepackage{graphicx} 
 
 \newtheorem{theorem}{Theorem}
@@ -38,6 +39,8 @@ Then, choose the weights of the neural network to interpolate linearly $f$ et th
 \includegraphics[width=\linewidth]{plot}
 
 \section{Proof}
-
+Since $f$ is continuous on a compact set, so $f$ is uniformly continuous.
+Thus, $\forall x_1,x_2 \in \left[ a,b \right]$, $\exists \delta>0$ such that 
+$$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon$$
 
 \end{document}
