@@ -2,12 +2,12 @@
 \usepackage{amssymb}
 \usepackage{amstext}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{graphicx} 
 
-\newtheorem{theorem}{Theorem}
-\newtheorem{proof}{Proof}
-\newtheorem{definition}{Definition}
-\newtheorem{claim}{Claim}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{definition}{Definition}
+\newtheorem*{claim}{Claim}
 
 %opening
 \title{Neural Networks Can Approximate Continuous Functions}
@@ -22,6 +22,7 @@
 	A clean Tex version of the proof seen during the lectures that neural networks with ReLU activation can approximate continuous functions.
 \end{abstract}
 
+\section{Statement}
 \begin{definition}
 	$\mathcal{C}\left( \left[ a,b \right] \right)$ is the set of real continuous functions on $\left[ a,b \right]$.
 \end{definition}
@@ -29,9 +30,11 @@
 	$\mathcal{P}\left( n,l \right)$ is the set of rectangle 1D-1D perceptrons with $l$ hidden layers and $n$ neurons in each hidden layer.
 \end{definition}
 
-\section{Theorem}
-$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ and } p \in \mathcal{P}(N,1) \text{ s.t. } \|p-f\|_\infty < \varepsilon$$
-Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
+\begin{theorem}[Particular case of the universal approximation theorem]
+	$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ and } p \in \mathcal{P}(N,1) \text{ s.t. } \|p-f\|_\infty < \varepsilon$$
+	Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
+\end{theorem}
+
 
 \section{Idea}
 The idea of the proof is to split the interval $\left[ a,b \right]$ in sub intervals such that $f$ has variation less than $\varepsilon$ in the sub-intervals.
@@ -68,7 +71,5 @@ Take:
 \end{itemize}
 Thus, $$p(x) = \xi + \sum_{k=0}^{N-1} \gamma_k (\alpha_k x + \beta_k)_+$$
 becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
-
-
 
 \end{document}
