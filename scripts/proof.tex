@@ -41,6 +41,8 @@ Then, choose the weights of the neural network to interpolate linearly $f$ et th
 \section{Proof}
 Since $f$ is continuous on a compact set, so $f$ is uniformly continuous.
 Thus, $\forall x_1,x_2 \in \left[ a,b \right]$, $\exists \delta>0$ such that 
-$$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon$$
+$$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
+
+Let $c_0 = a$ and $c_{i+1} = c_i + \delta$. Let $N \in \mathbb{N}$ be such that $c_N \geq b$ and redefine $c_N = b$.
 
 \end{document}
