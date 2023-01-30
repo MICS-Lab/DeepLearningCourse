@@ -90,8 +90,23 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 		\item Suppose that if $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
 		\item We want to show that if $x \in \left[ c_{n+1}, c_{n+2} \right]$, then $p(x) = f(c_{n+1}) + \tilde{\gamma_{n+1}}(x-c_{n+1})$.
 	\end{itemize}
-
-
+	Let $x \in \left[ c_{n+1}, c_{n+2} \right]$, let's calculate $p(x)$:
+	$$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+$$
+	if $k > n+1$, then $c_k \geq x$, so $(x - c_k)_+ = 0$; similarly, 
+	if $k \leq n+1$, then $c_k < x$, so $(x - c_k)_+ = x - c_k$ thus:
+	$$p(x) = f(a) + \sum_{k=0}^{n+1} \gamma_k (x - c_k)$$
+	Now, let's split $(x - c_k)$ to $(x - c_{n+1}) + (c_{n+1} - c_k)$:
+	$$p(x) = f(a) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1}) + \sum_{k=0}^{n+1} \gamma_k (c_{n+1} - c_k)$$
+	We can add again $(c_{n+1} - c_k)_+$ for $n+1 < k < N$ (this is just adding zeros) to the second sum to make $p(c_{n+1})$ appear:
+	$$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (c_{n+1} - c_k) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1})$$
+	$$= f(c_{n+1}) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1})$$
+	Now, $\gamma_k = \tilde{\gamma_k} - \tilde{\gamma_{k-1}} \quad 0 < k <N$ and $\tilde{\gamma_0} = \gamma_0$, so:
+	$$p(x) = f(c_{n+1}) + \gamma_0 (x - c_{n+1}) + \sum_{k=1}^{n+1} (\tilde{\gamma_k} - \tilde{\gamma_{k-1}}) (x - c_{n+1})$$
+	This is a telescoping series, after simplification, we have:
+	$$p(x) = f(c_{n+1}) + \tilde{\gamma_{n+1}} (x - c_{n+1})$$
+	As expected.
 \end{proof}
+
+
 
 \end{document}
