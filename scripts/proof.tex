@@ -108,6 +108,11 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 \end{proof}
 Therefore, we have that $\forall\, 0 \leq n < N$, if $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
 
+\paragraph{Bounds for $f(x)$ and $p(x)$ on $\left[ c_n, c_{n+1} \right]$}
+Take $x \in \left[ c_n, c_{n+1} \right)$, then we have: $|c_n - x| < \delta$, so $|f(x) - f(c_n)| < \varepsilon$.
+
+WLOG\footnote{Without Loss Of Generalities}, take $f(c_n) \leq f(c_{n+1})$:
+- $f(c_n) \leq p(x) \leq f(c_{n+1})$ and $|f(c_{n+1}) - f(c_n)| \leq \varepsilon$ so $|p(x) - f(c_n)| \leq \varepsilon$.
 
 
 \end{document}
