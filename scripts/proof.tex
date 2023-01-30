@@ -56,4 +56,19 @@ $$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
 \paragraph{Sub-intervals}
 Let $c_0 = a$ and $c_{i+1} = c_i + \delta$. Let $N \in \mathbb{N}$ be such that $c_N \geq b$ and redefine $c_N = b$.
 
+\paragraph{Coefficients}
+Take:
+\begin{itemize}
+	\item $\alpha_k = 1 \quad (0 \leq k < N)$
+	\item $\beta_k = -c_k \quad (0 \leq k < N)$
+	\item $\tilde{\gamma_k} = \frac{f(c_{k+1})-f(c_k)}{c_{k+1}-c_k} \quad (0 \leq k < N)$
+	\item $\gamma_0 = \tilde{\gamma0}$
+	\item $\gamma_k = \tilde{\gamma_{k+1}} - \tilde{\gamma_k}  \quad (0 < k < N)$
+	\item $\xi = f(a)$
+\end{itemize}
+Thus, $$p(x) = \xi + \sum_{k=0}^{N-1} \gamma_k (\alpha_k x + \beta_k)_+$$
+becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
+
+
+
 \end{document}
