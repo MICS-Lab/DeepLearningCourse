@@ -41,8 +41,12 @@
 The idea of the proof is to split the interval $\left[ a,b \right]$ in sub intervals such that $f$ has variation less than $\varepsilon$ in the sub-intervals.
 Then, choose the weights of the neural network to interpolate linearly $f$ et the beginning and end of the sub-intervals.
 
-We start with a given function $f \in \left[ a,b \right]$:
+We start with a given function $f \in \left[ a,b \right]$:\newline
 \includegraphics[width=\linewidth]{plot_1}
+
+We create "boxes" of maximum height $\varepsilon$:\newline
+\includegraphics[width=\linewidth]{plot_2}
+
 
 \section{Proof}
 Let $\varepsilon >0$ and $f \in \mathcal{C}(\left[ a,b \right])$ with $a,b \in \mathbb{R}$, we want $N \in \mathbb{N}$ and $p \in \mathcal{P}(N,1)$ such that $\|p-f\|_\infty < \varepsilon$.
