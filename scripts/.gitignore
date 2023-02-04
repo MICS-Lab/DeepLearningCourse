@@ -6,3 +6,5 @@
 *.aux
 *.out
 *.synctex.gz
+
+!plot_*.pdf
