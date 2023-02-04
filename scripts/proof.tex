@@ -44,25 +44,26 @@ Then, choose the weights of the neural network to interpolate linearly $f$ et th
 A live version of this proof process is available here:
 \url{https://pauldubois98.github.io/NeuralNetworkLiveProof/}.
 
-%\newpage
-%Start with a given function $f \in \left[ a,b \right]$:\newline
-%\includegraphics[width=\linewidth]{plot_1}
-%\vspace{1cm}
-%
-%Create "boxes" of maximum height $\varepsilon$:\newline
-%\includegraphics[width=\linewidth]{plot_2}
-%\vspace{1cm}
-%
-%Divide the interval $\left[ a,b \right]$ in sub-intervals using the boxes:\newline
-%\includegraphics[width=\linewidth]{plot_3}
-%\vspace{1cm}
-%
-%Interpolate $f$ linearly from the beginning to the end of each interval:\newline
-%\includegraphics[width=\linewidth]{plot_4}
-%\vspace{1cm}
-%
-%Create a network with weights that fit this interpolation:\newline
-%\includegraphics[width=\linewidth]{plot_5}
+\newpage
+Start with a given function $f \in \left[ a,b \right]$:\newline
+\includegraphics[width=\linewidth]{plot_1}
+\vspace{1cm}
+
+Create "boxes" of maximum height $\varepsilon$:\newline
+\includegraphics[width=\linewidth]{plot_2}
+\vspace{1cm}
+
+\newpage
+Divide the interval $\left[ a,b \right]$ in sub-intervals using the boxes:\newline
+\includegraphics[width=\linewidth]{plot_3}
+\vspace{1cm}
+
+Interpolate $f$ linearly from the beginning to the end of each interval:\newline
+\includegraphics[width=\linewidth]{plot_4}
+\vspace{1cm}
+
+Create a network with weights that fit this interpolation:\newline
+\includegraphics[width=\linewidth]{plot_5}
 
 \section{Proof}
 Let $\varepsilon >0$ and $f \in \mathcal{C}(\left[ a,b \right])$ with $a,b \in \mathbb{R}$, we want to find $N \in \mathbb{N}$ and $p \in \mathcal{P}(N,1)$ such that $\|p-f\|_\infty < \varepsilon$.
