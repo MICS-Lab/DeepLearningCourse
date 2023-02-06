@@ -32,8 +32,8 @@
 \end{definition}
 
 \begin{theorem}[Particular case of the universal approximation theorem\footnote{See \url{https://en.wikipedia.org/wiki/Universal_approximation_theorem} for details.}]
-	$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N} \text{ and } p \in \mathcal{P}(N,1) \text{ s.t. } \|p-f\|_\infty < \varepsilon$$
-	Where $\|g\|_\infty$ is infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
+	$$\forall f \in \mathcal{C}(\left[ a,b \right]), \ \forall \varepsilon > 0, \ \exists N \in \mathbb{N}, \exists p \in \mathcal{P}(N,1), \|p-f\|_\infty < \varepsilon$$
+	where $\|g\|_\infty$ is the infinity norm of $g$ on $\left[ a,b \right]$; i.e. $\|g\|_\infty = \max_{x \in \left[ a,b \right]}(|g(x)|)$.
 \end{theorem}
 
 
@@ -44,35 +44,42 @@ Then, choose the weights of the neural network to interpolate linearly $f$ et th
 A live version of this proof process is available here:
 \url{https://pauldubois98.github.io/NeuralNetworkLiveProof/}.
 
+\newpage
 Start with a given function $f \in \left[ a,b \right]$:\newline
 \includegraphics[width=\linewidth]{plot_1}
+\vspace{1cm}
 
 Create "boxes" of maximum height $\varepsilon$:\newline
 \includegraphics[width=\linewidth]{plot_2}
+\vspace{1cm}
 
+\newpage
 Divide the interval $\left[ a,b \right]$ in sub-intervals using the boxes:\newline
 \includegraphics[width=\linewidth]{plot_3}
+\vspace{1cm}
 
 Interpolate $f$ linearly from the beginning to the end of each interval:\newline
 \includegraphics[width=\linewidth]{plot_4}
+\vspace{1cm}
 
 Create a network with weights that fit this interpolation:\newline
 \includegraphics[width=\linewidth]{plot_5}
 
 \section{Proof}
-Let $\varepsilon >0$ and $f \in \mathcal{C}(\left[ a,b \right])$ with $a,b \in \mathbb{R}$, we want $N \in \mathbb{N}$ and $p \in \mathcal{P}(N,1)$ such that $\|p-f\|_\infty < \varepsilon$.
+Let $\varepsilon >0$ and $f \in \mathcal{C}(\left[ a,b \right])$ with $a,b \in \mathbb{R}$, we want to find $N \in \mathbb{N}$ and $p \in \mathcal{P}(N,1)$ such that $\|p-f\|_\infty < \varepsilon$.
 
 \paragraph{ReLU Network}
 If $p \in \mathcal{P}(N,1)$, then 
 $$p(x) = \xi + \sum_{k=0}^{N-1} \gamma_k (\alpha_k x + \beta_k)_+$$
 where $(x)_+$ is $\text{ReLU}(x)$.
 
-All we need to do is to find the right coefficients $\xi, \alpha_k, \beta_k, \gamma_k (0 \leq k < N)$ such that $|f(x)-p(x)| < \varepsilon \quad (\forall x \in \left[ a,b \right])$.
+All we need to do is to find the right coefficients $\xi, \alpha_k, \beta_k, \gamma_k (0 \leq k < N)$ such that $\forall x \in \left[ a,b \right] |f(x)-p(x)| < \varepsilon$.
 
 \paragraph{Uniform Continuity}
-Since $f$ is continuous on a compact set, so $f$ is uniformly continuous.
-Thus, $\forall x_1,x_2 \in \left[ a,b \right]$, $\exists \delta>0$ such that 
-$$|x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
+Since $f$ is continuous on a compact set, so $f$ is uniformly continuous\footnote{cf. \url{https://en.wikipedia.org/wiki/Uniform_continuity} to understand the difference between continuity and uniform continuity}.
+Thus:
+
+$$\forall x_1,x_2 \in \left[ a,b \right], \exists \delta>0,  |x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
 
 \paragraph{Sub-intervals}
 Let $c_0 = a$ and $c_{i+1} = c_i + \delta$. Let $N \in \mathbb{N}$ be such that $c_N \geq b$ and redefine $c_N = b$.
@@ -115,7 +122,7 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 	Now, let's split $(x - c_k)$ to $(x - c_{n+1}) + (c_{n+1} - c_k)$:
 	$$p(x) = f(a) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1}) + \sum_{k=0}^{n+1} \gamma_k (c_{n+1} - c_k)$$
 	We can add again $(c_{n+1} - c_k)_+$ for $n+1 < k < N$ (this is just adding zeros) to the second sum to make $p(c_{n+1})$ appear:
-	$$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (c_{n+1} - c_k) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1})$$
+	$$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (c_{n+1} - c_k)_+ + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1})$$
 	$$= f(c_{n+1}) + \sum_{k=0}^{n+1} \gamma_k (x - c_{n+1})$$
 	Now, $\gamma_k = \tilde{\gamma_k} - \tilde{\gamma_{k-1}} \quad 0 < k <N$ and $\tilde{\gamma_0} = \gamma_0$, so:
 	$$p(x) = f(c_{n+1}) + \gamma_0 (x - c_{n+1}) + \sum_{k=1}^{n+1} (\tilde{\gamma_k} - \tilde{\gamma_{k-1}}) (x - c_{n+1})$$
@@ -125,17 +132,19 @@ becomes $$p(x) = f(a) + \sum_{k=0}^{N-1} \gamma_k (x - c_k)_+.$$
 \end{proof}
 Therefore, we have that $\forall\, 0 \leq n < N$, if $x \in \left[ c_n, c_{n+1} \right]$, then $p(x) = f(c_n) + \tilde{\gamma_n}(x-c_n)$.
 
-\paragraph{Bounds for $f(x)$ and $p(x)$ on $\left[ c_n, c_{n+1} \right)$}
+\paragraph{Bounds for $f$ and $p$ on $\left[ c_n, c_{n+1} \right)$}
 Take $x \in \left[ c_n, c_{n+1} \right)$, then we have: $|c_n - x| < \delta$, so $|f(x) - f(c_n)| < \varepsilon$.
 
 WLOG\footnote{Without Loss Of Generalities}, take $f(c_n) \leq f(c_{n+1})$:
 - $f(c_n) \leq p(x) \leq f(c_{n+1})$ and $|f(c_{n+1}) - f(c_n)| \leq \varepsilon$ so $|p(x) - f(c_n)| \leq \varepsilon$.
 
-\paragraph{Bound for $f(x) - p(x)$ on $\left[ a,b \right]$}
-$$|f(x) - p(x)| = |f(x) - f(c_n) + f(c_n) - p(x)|$$
-$$\leq |f(x) - f(c_n)| + |p(x) - f(c_n)|$$
-$$< \varepsilon + \varepsilon = 2\varepsilon$$
-This is true $\forall\, 0 \leq n < N, \ \forall\, x \in \left[ c_n, c_{n+1} \right)$, it is true $\forall\, x \in \left[ a,b \right)$.
+\paragraph{Bound for $f - p$ on $\left[ a,b \right]$}
+\begin{align*}
+	\forall\, 0 \leq n < N, \ \forall\, x \in \left[ c_n, c_{n+1} \right) |f(x) - p(x)| &= |f(x) - f(c_n) + f(c_n) - p(x)| \\
+	&\leq |f(x) - f(c_n)| + |p(x) - f(c_n)| \\
+	&< \varepsilon + \varepsilon = 2\varepsilon
+\end{align*}
+Therefore it is true on $\left[ a,b \right)$.
 
 Moreover, $p(b) = f(b)$ (from the property above), so $|f(x) - p(x)| < 2\varepsilon$ on all of $\left[ a,b \right]$.
 
