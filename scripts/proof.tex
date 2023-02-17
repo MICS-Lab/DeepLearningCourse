@@ -79,7 +79,7 @@ All we need to do is to find the right coefficients $\xi, \alpha_k, \beta_k, \ga
 Since $f$ is continuous on a compact set, so $f$ is uniformly continuous\footnote{cf. \url{https://en.wikipedia.org/wiki/Uniform_continuity} to understand the difference between continuity and uniform continuity}.
 Thus:
 
-$$\forall x_1,x_2 \in \left[ a,b \right], \exists \delta>0,  |x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
+$$\exists \delta>0 \text{ such that } \forall x_1,x_2 \in \left[ a,b \right], |x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
 
 \paragraph{Sub-intervals}
 Let $c_0 = a$ and $c_{i+1} = c_i + \delta$. Let $N \in \mathbb{N}$ be such that $c_N \geq b$ and redefine $c_N = b$.
