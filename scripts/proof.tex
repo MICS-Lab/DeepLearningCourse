@@ -76,7 +76,7 @@ where $(x)_+$ is $\text{ReLU}(x)$.
 All we need to do is to find the right coefficients $\xi, \alpha_k, \beta_k, \gamma_k (0 \leq k < N)$ such that $\forall x \in \left[ a,b \right] |f(x)-p(x)| < \varepsilon$.
 
 \paragraph{Uniform Continuity}
-Since $f$ is continuous on a compact set, so $f$ is uniformly continuous\footnote{cf. \url{https://en.wikipedia.org/wiki/Uniform_continuity} to understand the difference between continuity and uniform continuity}.
+Since $f$ is continuous on a compact set, so $f$ is uniformly continuous\footnote{cf. \url{https://en.wikipedia.org/wiki/Uniform_continuity} to understand the difference between continuity and uniform continuity} (from Heine-Cantor theorem\footnote{cf.  \url{https://en.wikipedia.org/wiki/Heine-Cantor_theorem} for the exact statement}).
 Thus:
 
 $$\exists \delta>0 \text{ such that } \forall x_1,x_2 \in \left[ a,b \right], |x_1-x_2| < \delta \implies |f(x_1) - f(x_2)| < \varepsilon.$$
