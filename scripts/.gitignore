@@ -1,9 +1,5 @@
 saved_models/
 
-*.gv
-*.pdf
-*.html
-
 *.log
 *.aux
 *.out
