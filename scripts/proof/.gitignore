@@ -1,0 +1,9 @@
+proof.pdf
+
+*.log
+*.aux
+*.out
+*.synctex.gz
+
+*.html
+*.ipynb

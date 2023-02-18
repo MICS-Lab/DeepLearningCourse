@@ -1,8 +1,1 @@
 saved_models/
-
-*.log
-*.aux
-*.out
-*.synctex.gz
-
-!plot_*.pdf
