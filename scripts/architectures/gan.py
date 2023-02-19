@@ -15,3 +15,21 @@ gan_network.add(Dense(units=9,
 gan_network.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
 ann_viz(gan_network, title="gan", filename="gan.gv")
+
+translate_network = Sequential()
+translate_network.add(Dense(units=8,
+                  activation='relu',
+                  kernel_initializer='uniform',
+                  input_dim=10))
+translate_network.add(Dense(units=6,
+                  activation='relu',
+                  kernel_initializer='uniform'))
+translate_network.add(Dense(units=8,
+                  activation='relu',
+                  kernel_initializer='uniform'))
+translate_network.add(Dense(units=10,
+                  activation='relu',
+                  kernel_initializer='uniform'))
+translate_network.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+ann_viz(translate_network, title="gan", filename="cycle_gan.gv")
