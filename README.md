@@ -28,4 +28,4 @@ https://colab.research.google.com/drive/1Ummw01RU9TeSnmoUIBAPR88wfTpLvZUD?usp=sh
 - Fitting function 5D-5D: https://www.kaggle.com/t/3eb9e2aa517a414aacd0c9468281a7c2
 - Binary Classification (Glasses/NoGlasses): https://www.kaggle.com/t/a232e4d3385b46c68921719e547b45e1
 - Decimal Classification (MICS MNIST): https://www.kaggle.com/t/073954a6c84a4970903d5a340df28695
-- Transfer Learning (should be online next week)
+- Transfer Learning (Sword video classification): https://www.kaggle.com/t/d6ca6181f7eb4acc93f418f7b43cbece
