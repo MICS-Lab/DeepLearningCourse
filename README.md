@@ -14,8 +14,27 @@ Ressources for Deep Learning Course (VSE).
   * Must demonstrate understanding of deep learning & ability to lead a project
   * Easiest projects that are thoroughly understood are preferred to complicated projects that are only scratched the surface
   * Slides and written report must be in English. Presentation doesn't need to.
-  * Example of a project: [this website](https://thispersondoesnotexist.com/) generates artificial images of people. [Scrap](https://github.com/David-Lor/ThisPersonDoesNotExistAPI) images (or find a database of images), split it in two (realistic and non-realistic images) and create a neural network that outputs "realistic" or "not realistic" when receiving images. Then create a simple code that requests the API of the website and only outputs that are realistic.
-  * Example 2 of a project: detect language from an audio sample.
+
+## Projects Ideas
+#### "Mathy" projects:
+- deep to shallow: deep (>2 hidden layers) to shallow (1 hidden layer) network
+- perturb weights of a network to assess which neurons are the most “sensitives” (maybe compare wide and deep?)
+#### CNN projects:
+- follow up on digits classification: hand written characters classification
+- measure how far two handwritings are from images samples (use siamese networks to create a distance)
+- follow up on TD8: from medical decathlon (http://medicaldecathlon.com/), try to segment other organs (we will do prostate and hippocampus in TD8 & TD8bis)
+- realistic person not existing: [this website](https://thispersondoesnotexist.com/) generates artificial images of people some are more realistic than others; create a network that discriminate realistic from unrealistic ones
+#### RNN projects:
+- predict the language spoken from some audio record
+- predict the area of math to which belong the latex formula
+#### GAN projects:
+- conditional gans on pokemons: generate intermediate frames for the evolution of pokemons (this could be a beginning: https://becominghuman.ai/generating-new-pokemons-using-gans-ceba1c6dc676)
+- mixing faces: take images of faces and create a mixture of them, you can then create the "average face" of your group, your family, etc...
+- how will our babies look like: take two face images and generate a younger version of the mixed faces
+#### NLP projects:
+- autocomplete based on previous messages of the conversation
+- automatic texting in a conversation (similar to the above, but more ambitious... How long can you hold before the other person finds out? this is called the Turing test)
+- automatic group conversation image generation based on conversation title/messages
 
 ## Drive folder with datasets:
 https://drive.google.com/drive/folders/1_KqzmBVvZKwvLi0a1W3P6wPa-IgwnmLP?usp=share_link
