@@ -7,3 +7,5 @@ DL_Practice_*_solutions_files/
 *.aux
 *.out
 *.synctex.gz
+
+pretrained_models/
