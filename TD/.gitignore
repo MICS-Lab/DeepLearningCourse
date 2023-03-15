@@ -12,3 +12,6 @@ pretrained_models/*
 !pretrained_models/prostate-model-500.pt
 !pretrained_models/prostate-dice_losses-500.pkl
 !pretrained_models/prostate-mse_losses-500.pkl
+!pretrained_models/hippocampus-model-300.pt
+!pretrained_models/hippocampus-dice_losses-300.pkl
+!pretrained_models/hippocampus-mse_losses-300.pkl
