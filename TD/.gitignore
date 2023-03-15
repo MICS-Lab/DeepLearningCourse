@@ -8,4 +8,7 @@ DL_Practice_*_solutions_files/
 *.out
 *.synctex.gz
 
-pretrained_models/
+pretrained_models/*
+!pretrained_models/prostate-model-500.pt
+!pretrained_models/prostate-dice_losses-500.pkl
+!pretrained_models/prostate-mse_losses-500.pkl
