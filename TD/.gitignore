@@ -1,4 +1,6 @@
-data/
+data/*
+!data/one.png
+!data/seven.png
 *.html
 *.pdf
 
