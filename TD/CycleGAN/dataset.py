@@ -22,7 +22,7 @@ class GlassesNoGlassesDataset(Dataset):
     def __getitem__(self, index):
         image_glass_path = None
         image_glass = None
-        if index > len(self.glasses_images):
+        if index >= len(self.glasses_images):
             image_glass_path = random.choice(self.glasses_images)
         else:
             image_glass_path = self.glasses_images[index]
@@ -32,7 +32,7 @@ class GlassesNoGlassesDataset(Dataset):
 
         image_no_glass_path = None
         image_no_glass = None
-        if index > len(self.no_glasses_images):
+        if index >= len(self.no_glasses_images):
             image_no_glass_path = random.choice(self.no_glasses_images)
         else:
             image_no_glass_path = self.no_glasses_images[index]
