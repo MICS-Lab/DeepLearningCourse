@@ -1,6 +1,8 @@
 import numpy as np
 import os
 import random
+import torch.nn
+import torchvision.transforms as transforms
 from PIL import Image
 from torch.utils.data import Dataset
 
@@ -19,21 +21,42 @@ class GlassesNoGlassesDataset(Dataset):
         return max(len(self.glasses_images), len(self.no_glasses_images))
 
     def __getitem__(self, index):
+        image_glass_path = None
         image_glass = None
         if index > len(self.glasses_images):
-            image_glass = random.choice(self.glasses_images)
+            image_glass_path = random.choice(self.glasses_images)
         else:
-            image_glass = self.glasses_images[index]
+            image_glass_path = self.glasses_images[index]
+        image_glass = np.array(
+            Image.open(os.path.join(self.root_glasses, image_glass_path)).convert("RGB")
+        )
 
+        image_no_glass_path = None
         image_no_glass = None
         if index > len(self.no_glasses_images):
-            image_no_glass = random.choice(self.no_glasses_images)
+            image_no_glass_path = random.choice(self.no_glasses_images)
         else:
-            image_no_glass = self.no_glasses_images[index]
+            image_no_glass_path = self.no_glasses_images[index]
+        image_no_glass = np.array(
+            Image.open(os.path.join(self.root_no_glasses, image_no_glass_path)).convert("RGB")
+        )
+
+        if self.transform:
+            image_glass = self.transform(image_glass)
+            image_no_glass = self.transform(image_no_glass)
 
         return image_glass, image_no_glass
 
 
 if __name__ == "__main__":
-    dataset = GlassesNoGlassesDataset("data/train/glasses", "data/train/no_glasses")
+    dataset = GlassesNoGlassesDataset(
+        "data/train/glasses",
+        "data/train/no_glasses",
+        transform=transforms.Compose([
+            transforms.ToTensor(),
+            transforms.Resize(256),
+            transforms.RandomHorizontalFlip(p=0.5),
+            transforms.Normalize(0.5, 0.5)
+        ])
+    )
     print(dataset[0])
