@@ -1,15 +1,20 @@
 import torch.cuda
 
+# Force flush
+import functools
+print = functools.partial(print, flush=True)  # noqa
+
+# Global variables
 FOLDER_FOR_VAL_PLOTS = "label_smoothing/images_with_skip_with_double_res_block_act_no_act"
 
-NUM_EPOCHS = 3
-BATCH_SIZE = 2
-LAMBDA_CYCLE = 10
+NUM_EPOCHS = 301
+BATCH_SIZE = 12
+LAMBDA_CYCLE = 5
 LAMBDA_IDENTITY = 0
 LEARNING_RATE_GEN = 1e-5
 LEARNING_RATE_DISC = 1e-5
 
-ONE_SIDED_LABEL_SMOOTHING = 0.1
+LABEL_SMOOTHING = 0.1
 """
 Label smoothing can help improve the convergence of CycleGAN by providing a more nuanced target distribution for the 
 discriminator. In traditional GANs, the discriminator is trained to distinguish between real and fake samples by 
@@ -33,6 +38,7 @@ Cf. generator_model.py
 """
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+print("Using device:", DEVICE)
 
 TRAIN_DIR = "data/train"
 VAL_DIR = "data/val"

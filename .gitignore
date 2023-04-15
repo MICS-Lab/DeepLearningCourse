@@ -1,27 +1,33 @@
 .idea/*
+TD/DL_Practice_10/.idea/*
 
 TD/ignorer.txt
 TD/DL_Practice_2a_solutionsR.ipynb
 TD/DL_Practice_2b_solutionsR.ipynb
 
-TD/CycleGAN/data
+TD/DL_Practice_10/data
+TD/DL_Practice_10/manim/media/*
 
-TD/CycleGAN/label_smoothing/images_with_skip/*
-!TD/CycleGAN/label_smoothing/images_with_skip/.gitkeep
-TD/CycleGAN/label_smoothing/images_with_skip_with_double_res_block_act_no_act/*
-!TD/CycleGAN/label_smoothing/images_with_skip_with_double_res_block_act_no_act/.gitkeep
-TD/CycleGAN/label_smoothing/images_without_skip/*
-!TD/CycleGAN/label_smoothing/images_without_skip/.gitkeep
-TD/CycleGAN/label_smoothing/images_without_skip_with_double_res_block_act_no_act/*
-!TD/CycleGAN/label_smoothing/images_without_skip_with_double_res_block_act_no_act/.gitkeep
+TD/DL_Practice_10/label_smoothing/images_with_skip/*
+!TD/DL_Practice_10/label_smoothing/images_with_skip/.gitkeep
+TD/DL_Practice_10/label_smoothing/images_with_skip_with_double_res_block_act_no_act/*
+!TD/DL_Practice_10/label_smoothing/images_with_skip_with_double_res_block_act_no_act/.gitkeep
+TD/DL_Practice_10/label_smoothing/images_without_skip/*
+!TD/DL_Practice_10/label_smoothing/images_without_skip/.gitkeep
+TD/DL_Practice_10/label_smoothing/images_without_skip_with_double_res_block_act_no_act/*
+!TD/DL_Practice_10/label_smoothing/images_without_skip_with_double_res_block_act_no_act/.gitkeep
 
-TD/CycleGAN/no_label_smoothing/images_with_skip/*
-!TD/CycleGAN/no_label_smoothing/images_with_skip/.gitkeep
-TD/CycleGAN/no_label_smoothing/images_with_skip_with_double_res_block_act_no_act/*
-!TD/CycleGAN/no_label_smoothing/images_with_skip_with_double_res_block_act_no_act/.gitkeep
-TD/CycleGAN/no_label_smoothing/images_without_skip/*
-!TD/CycleGAN/no_label_smoothing/images_without_skip/.gitkeep
-TD/CycleGAN/no_label_smoothing/images_without_skip_with_double_res_block_act_no_act/*
-!TD/CycleGAN/no_label_smoothing/images_without_skip_with_double_res_block_act_no_act/.gitkeep
+TD/DL_Practice_10/no_label_smoothing/images_with_skip/*
+!TD/DL_Practice_10/no_label_smoothing/images_with_skip/.gitkeep
+TD/DL_Practice_10/no_label_smoothing/images_with_skip_with_double_res_block_act_no_act/*
+!TD/DL_Practice_10/no_label_smoothing/images_with_skip_with_double_res_block_act_no_act/.gitkeep
+TD/DL_Practice_10/no_label_smoothing/images_without_skip/*
+!TD/DL_Practice_10/no_label_smoothing/images_without_skip/.gitkeep
+TD/DL_Practice_10/no_label_smoothing/images_without_skip_with_double_res_block_act_no_act/*
+!TD/DL_Practice_10/no_label_smoothing/images_without_skip_with_double_res_block_act_no_act/.gitkeep
+
+TD/DL_Practice_10/run_train_glasses.sh
+TD/DL_Practice_10/outs/*
+
 
 ~*

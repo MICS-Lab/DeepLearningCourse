@@ -55,7 +55,15 @@ if __name__ == "__main__":
             transforms.ToTensor(),
             transforms.Resize(256),
             transforms.RandomHorizontalFlip(p=0.5),
-            transforms.Normalize(0.5, 0.5)
+            transforms.Normalize(0.5, 0.5)  # from [0; 1] to [-1; 1]
         ])
     )
-    print(dataset[0])
+
+    # Plot the images to make sure everything is fine
+    import matplotlib.pyplot as plt
+    glass_image = dataset[0][0] * 0.5 + 0.5
+    plt.imshow(glass_image.permute(1, 2, 0))  # 3x256x256 -> 256x256x3
+    plt.show()
+    no_glass_image = dataset[0][1] * 0.5 + 0.5
+    plt.imshow(no_glass_image.permute(1, 2, 0))  # 3x256x256 -> 256x256x3
+    plt.show()
