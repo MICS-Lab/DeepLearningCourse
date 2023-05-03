@@ -48,3 +48,10 @@ https://colab.research.google.com/drive/1Ummw01RU9TeSnmoUIBAPR88wfTpLvZUD?usp=sh
 - Binary Classification (Glasses/NoGlasses): https://www.kaggle.com/t/a232e4d3385b46c68921719e547b45e1
 - Decimal Classification (MICS MNIST): https://www.kaggle.com/t/073954a6c84a4970903d5a340df28695
 - Transfer Learning (Sword video classification): https://www.kaggle.com/t/d6ca6181f7eb4acc93f418f7b43cbece
+
+
+
+----
+
+Course ressources from last year:
+https://m2dsupsdlclass.github.io/lectures-labs/
