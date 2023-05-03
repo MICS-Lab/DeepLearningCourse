@@ -68,12 +68,7 @@ class Generator(nn.Module):
             Block(num_features * 2, num_features * 4, down=True, kernel_size=3, stride=2, padding=1)
         ])
         self.res_blocks = nn.ModuleList([
-            ResBlock(num_features * 4),
-            ResBlock(num_features * 4),
-            ResBlock(num_features * 4),
-            ResBlock(num_features * 4),
-            ResBlock(num_features * 4),
-            ResBlock(num_features * 4),
+            ResBlock(num_features * 4) for _ in range(9)
         ])
         self.up_blocks = nn.ModuleList([
             Block(num_features * 4, num_features * 2, down=False, kernel_size=3, stride=2, padding=1, output_padding=1),
@@ -111,10 +106,10 @@ class Generator(nn.Module):
         return torch.tanh(x)
 
 
-def test():
+def shape_testing():
     img_channels = 3
     img_size = 256
-    generator = Generator()
+    generator = Generator(num_features=9)
     print(generator)
 
     x = torch.randn((2, img_channels, img_size, img_size))
@@ -123,4 +118,4 @@ def test():
 
 
 if __name__ == "__main__":
-    test()
+    shape_testing()

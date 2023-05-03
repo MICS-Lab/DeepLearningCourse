@@ -22,7 +22,7 @@ class Block(nn.Module):
 
 
 class Discriminator(nn.Module):
-    def __init__(self, in_channels: int = 3, out_channels: tuple[int] = (64, 128, 256, 1)):
+    def __init__(self, in_channels: int = 3, out_channels: tuple[int] = (64, 128, 256, 512)):
         super().__init__()
         self.initial = nn.Sequential(
             nn.Conv2d(
@@ -46,13 +46,23 @@ class Discriminator(nn.Module):
             in_channels = num_channel
         self.model = nn.Sequential(*layers)
 
+        self.final = nn.Conv2d(
+            in_channels,
+            1,
+            kernel_size=4,
+            stride=1,
+            padding=1,
+            padding_mode="reflect"
+        )
+
     def forward(self, x):
         x = self.initial(x)
         x = self.model(x)
+        x = self.final(x)
         return torch.sigmoid(x)
 
 
-def test():
+def shape_testing():
     x = torch.randn((5, 3, 256, 256))
     discriminator = Discriminator(in_channels=3)
     print(discriminator)
@@ -63,5 +73,5 @@ def test():
 
 
 if __name__ == "__main__":
-    test()
+    shape_testing()
 
